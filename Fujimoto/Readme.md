@@ -1,5 +1,6 @@
 # コマンドライン入門
 藤本真悟（医学部・附属実験実習機器センター）  
+和智仲是（熱帯生物圏研究センター・西表研究施設）  
 作成：2022年12月20日
 ___
 
@@ -31,7 +32,7 @@ top -u [ユーザー名]
 cat /mnt/bioInfo/bioInfo2022_share/sfujimoto/medaka_HdrR_genome.fasta
 
 # 実行途中で強制終了するには
-# キーボードのCtrl, c を同時に押下する
+# キーボードのCtrl, c を同時に押下
 
 ```
 
@@ -42,10 +43,10 @@ cat /mnt/bioInfo/bioInfo2022_share/sfujimoto/medaka_HdrR_genome.fasta
 cat /mnt/bioInfo/bioInfo2022_share/sfujimoto/medaka_HdrR_genome.fasta
 
 # 実行途中で一時停止したいときは
-# キーボードのCtrl, z を同時に押下する
+# キーボードのCtrl, z を同時に押下
 # コマンドが入力可能な状態になる
 
-# 待機中のコマンドも含めたリストを表示する
+# 待機中のコマンドも含めたリストを表示
 jobs
 
 # 一時停止したコマンドの再開
@@ -55,11 +56,11 @@ fg
 
 # 4. ネットワーク上からのファイルの取得
 
-SARS-CoV-2 ウイルスのリファレンスゲノム配列をNCBIのデータベースからダウンロードする
+SARS-CoV-2 ウイルスのリファレンスゲノム配列をNCBIのデータベースからダウンロード
 https://www.ncbi.nlm.nih.gov/assembly/GCF_009858895.2
 
 ```
-# NCBIのwebサイトに接続してfasta ファイルをダウンロードする
+# NCBIのwebサイトに接続してfasta ファイルをダウンロード
 wget https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/009/858/895/GCF_009858895.2_ASM985889v3/GCF_009858895.2_ASM985889v3_genomic.fna.gz
 
 # gzip圧縮されたfastaファイルを読み込みできるように解凍して表示
@@ -68,14 +69,15 @@ cat GCF_009858895.2_ASM985889v3_genomic.fna
 
 ```
 
-Github (https://github.co.jp) では、プログラムや関連するドキュメントが公開されている
-この生命情報科学の講義用に、Github上で公開している資料を一括でコピーしてダウンロードする
+Github (https://github.co.jp) では、プログラムや関連するドキュメントが公開されている  
+この生命情報科学の講義用に、Github上で公開している資料を一括でコピーしてダウンロードする  
 
 ```
-# URLはGithub上のダウンロードしたい資料を指定する
+# Github上のURLを指定
 git clone https://github.com/wachinakatada/22_seimeijoho.git
 
-# ファイルのリストを表示して、22_seimeijohoというディレクトリが作成されているか確認する
+# ファイルのリストを表示
+# 22_seimeijohoというディレクトリが作成されているか確認
 ls -l
 
 ```
