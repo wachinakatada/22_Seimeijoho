@@ -82,10 +82,10 @@ rm [ファイル名]
 ### 演習1: ここまでのコマンドを使ってみよう
 ```sh
 # 適当なディレクトリを作成する
-$ mkdir bio2021
+$ mkdir bioinfo
 
 # 作成したディレクトリに移動する
-$ cd bio2021
+$ cd bioinfo
 
 # 空のファイル file1.txt を作成する
 $ touch file1.txt
