@@ -27,7 +27,7 @@ top -u [ユーザー名]
 
 ```
 # 以下のファイルは、メダカのリファレンスゲノムの塩基配列情報
-# サイズが大きいので(約700MB, 7億塩基を含む)、catで開くと終了まで時間がかかる
+# ファイルが大きいので(約700MB, 7億塩基を含む)、catで開くと終了まで時間がかかる
 
 cat /mnt/bioInfo/bioInfo2022_share/sfujimoto/medaka_HdrR_genome.fasta
 
@@ -56,11 +56,11 @@ fg
 
 # 4. ネットワーク上からのファイルの取得
 
-SARS-CoV-2 ウイルスのリファレンスゲノム配列をNCBIのデータベースからダウンロード
+SARS-CoV-2 ウイルスのリファレンスゲノム配列をNCBIからダウンロードしてみる
 https://www.ncbi.nlm.nih.gov/assembly/GCF_009858895.2
 
 ```
-# NCBIのwebサイトに接続してfasta ファイルをダウンロード
+# NCBIのwebサイトに接続してfasta をダウンロード
 wget https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/009/858/895/GCF_009858895.2_ASM985889v3/GCF_009858895.2_ASM985889v3_genomic.fna.gz
 
 # gzip圧縮されたfastaファイルを読み込みできるように解凍して表示
@@ -81,3 +81,37 @@ git clone https://github.com/wachinakatada/22_seimeijoho.git
 ls -l
 
 ```
+
+# 5. ファイルを1行ずつ読み込んで内容を変更する
+
+```
+# ファイルの内容を表示して確認
+cat /mnt/bioInfo/bioInfo2022_share/sfujimoto/textSample.txt
+
+# 数値が5行分含まれる
+#   0
+#   1
+#  10
+#  11
+# 100
+
+
+# 同じ行を2回繰り返して表示する
+# while read: txtRowという名前の変数として、1行分の情報を保持する
+cat /mnt/bioInfo/bioInfo2022_share/sfujimoto/textSample.txt | while read txtRow
+do
+ # 変数の中身を表示する
+ echo $txtRow 
+ echo $txtRow
+done
+
+# 0 を X に置換した出力結果を表示する
+cat /mnt/bioInfo/bioInfo2022_share/sfujimoto/textSample.txt | while read line
+do
+ echo $line | sed -e 's/0/X/g' 
+done
+
+
+```
+
+
