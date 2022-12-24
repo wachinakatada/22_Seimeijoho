@@ -4,18 +4,18 @@
 ## 0)事前の準備
 Tera TermまたはPuTTYのインストール(Windows)。  
 WinSCP(Windows)またはCyberduck(Mac)のインストール。  
-SplitTree4のインストール (https://software-ab.informatik.uni-tuebingen.de/download/splitstree4/welcome.html)
+SplitTree4のインストール ( https://software-ab.informatik.uni-tuebingen.de/download/splitstree4/welcome.html )
 。
 
 以下のソフトウェアのインストールはサーバーを使う場合には不要
 * Rおよび必要なパッケージ
-* Plink(https://www.cog-genomics.org/plink/)
-* ADMIXTURE(http://dalexander.github.io/admixture/index.html)
+* Plink( https://www.cog-genomics.org/plink/ )
+* ADMIXTURE( http://dalexander.github.io/admixture/index.html )
 
 ## 1)準備
 
 ### 1-1)計算機サーバへの接続
-http://pjc.lab.u-ryukyu.ac.jp/を参照。  
+http://pjc.lab.u-ryukyu.ac.jp/ を参照。  
 PuTTY(またはTera Term）およびFileZilla（またはWinSCPかCyberduck）を起動。    
 ユーザ名、passを入力。  
 
